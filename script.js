@@ -59,3 +59,50 @@ function renderizarTarefas() {
         lista.appendChild(item);
     });
 }
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+        const tarefaInput = document.getElementById("tarefaInput");
+        tarefaInput.focus(); 
+    }
+});
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown") {
+        const filtroSelect = document.getElementById("filtroSelect");
+        filtroSelect.focus(); 
+    }
+}
+);
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        const tarefaInput = document.getElementById("tarefaInput");
+        if (document.activeElement === tarefaInput) {
+            adicionarTarefa();
+    }
+}
+});
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Backspace") {
+        if (tarefas.length > 0) {
+            tarefas.pop(); 
+            renderizarTarefas(); 
+        }
+    }
+});
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Shift") {
+        if (tarefas.length > 0) {
+            const ultimaTarefa = tarefas[tarefas.length - 1]; 
+            ultimaTarefa.concluida = true; 
+            renderizarTarefas();
+        }
+    }
+});
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Control") {
+        if (tarefas.length > 0) {
+            const ultimaTarefa = tarefas[tarefas.length - 1]; 
+            ultimaTarefa.concluida = false; 
+            renderizarTarefas();
+        }
+    }
+});

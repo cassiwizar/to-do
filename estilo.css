@@ -95,3 +95,31 @@ img {
 .checkbox {
     cursor: pointer;
 }
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  appearance: none; 
+  background-image: url('https://cdn-icons-png.flaticon.com/512/60/60995.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+select:hover {
+  border-color: #28a745;
+  background-color: #e9f7ef;
+}
+
+select:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
